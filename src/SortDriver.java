@@ -12,25 +12,25 @@ public class SortDriver
 
     public static void mainLoop()
     {
-        Integer[] array;
+        Integer[] intArray;
+        String[] strArray;
         int choice = 9;
         boolean quit = false;
 
         while(!quit)
         {
-            array = new Integer[]{5, 3, 8, 1, 0, 2, 9, 7, 4, 6};  /* resets array */
+            intArray = new Integer[]{5, 3, 8, 1, 0, 2, 9, 7, 4, 6};  /* resets array */
+            strArray = new String[]{"c", "w", "x", "n", "a", "u", "t", "p", "m", "l"};  /* resets array */
             printMenu();
 
             choice = getChoice();
-            System.out.println();
 
             switch (choice)
             {
                 case 1:
                     System.out.printf("Bubble Sort results\n####################\n");
-                    printArray("Original array: ", array);
-                    BubbleSort.sort(array); 
-                    printArray("Sorted array:   ", array);
+                    processArray(intArray, choice);
+                    processArray(strArray, choice);
                     break;
                 case 0:
                     quit = true;
@@ -41,6 +41,20 @@ public class SortDriver
             }
             System.out.println();
         }
+    }
+
+    /* Takes array and calls printArray before and after calling the appropriate sort function */
+    public static <T extends Comparable<T>> void processArray(T[] array, int choice)
+    {
+        printArray("Original array: ", array);
+        switch(choice)
+        {
+            case 1:
+                BubbleSort.sort(array);
+                break;
+            default: ; // Will never be default
+        }
+        printArray("Sorted array:   ", array);
     }
 
     public static <T> void printArray(String message, T[] array)
@@ -56,8 +70,8 @@ public class SortDriver
         System.out.printf("Make your selection:  ");
     }
 
-    public static int getChoice()
     /* gets user input for choice in form of integer; returns 9 if input mismatch */
+    public static int getChoice()
     {
         Scanner myscanner = new Scanner(System.in);
         int choice = 9;
@@ -69,6 +83,7 @@ public class SortDriver
         {
             choice = 9;
         }
+        System.out.println();
         return choice;
     }
 }

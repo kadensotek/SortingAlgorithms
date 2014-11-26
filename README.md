@@ -1,3 +1,3 @@
 Custom implementations of sorting algorithms
-* Sorting array of integers
+* Sorts an Integer array and a String array
 * Implemented using generics
