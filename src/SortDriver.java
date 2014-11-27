@@ -1,4 +1,5 @@
 import java.util.InputMismatchException;
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class SortDriver
@@ -33,7 +34,7 @@ public class SortDriver
                     processArray(strArray, choice);
                     break;
                 case 2:
-                    System.out.printf("Insertion Sort results\n####################\n");
+                    System.out.printf("Insertion Sort results\n#######################\n");
                     processArray(intArray, choice);
                     processArray(strArray, choice);
                     break;
@@ -67,7 +68,7 @@ public class SortDriver
 
     public static <T> void printArray(String message, T[] array)
     {
-        System.out.println(message + java.util.Arrays.toString(array));
+        System.out.println(message + Arrays.toString(array));
     }
 
     public static void printMenu()
