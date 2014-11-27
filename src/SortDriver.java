@@ -32,6 +32,11 @@ public class SortDriver
                     processArray(intArray, choice);
                     processArray(strArray, choice);
                     break;
+                case 2:
+                    System.out.printf("Insertion Sort results\n####################\n");
+                    processArray(intArray, choice);
+                    processArray(strArray, choice);
+                    break;
                 case 0:
                     quit = true;
                     break;
@@ -52,6 +57,9 @@ public class SortDriver
             case 1:
                 BubbleSort.sort(array);
                 break;
+            case 2:
+                InsertionSort.sort(array);
+                break;
             default: ; // Will never be default
         }
         printArray("Sorted array:   ", array);
@@ -66,6 +74,7 @@ public class SortDriver
     {
         System.out.println("Select the type of sort:");
         System.out.println("1. Bubble Sort");
+        System.out.println("2. Insertion Sort");
         System.out.println("0. Quit");
         System.out.printf("Make your selection:  ");
     }
