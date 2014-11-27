@@ -1,5 +1,10 @@
 public class BubbleSort
 {
+    /*
+     *     Simple sort with complexity of O(n^2).
+     *     Not useful outside of small arrays.
+     */
+
     public static <T extends Comparable<T>> void sort(T[] array)
     {
         T temp;
