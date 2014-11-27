@@ -43,6 +43,11 @@ public class SortDriver
                     processArray(intArray, choice);
                     processArray(strArray, choice);
                     break;
+                case 4:
+                    System.out.printf("Quick Sort results\n###################\n");
+                    processArray(intArray, choice);
+                    processArray(strArray, choice);
+                    break;
                 case 0:
                     quit = true;
                     break;
@@ -69,6 +74,9 @@ public class SortDriver
             case 3:
                 SelectionSort.sort(array);
                 break;
+            case 4:
+                QuickSort.sort(array);
+                break;
             default: ; // Will never be default
         }
         printArray("Sorted array:   ", array);
@@ -85,6 +93,7 @@ public class SortDriver
         System.out.println("1. Bubble Sort");
         System.out.println("2. Insertion Sort");
         System.out.println("3. Selection Sort");
+        System.out.println("4. Quick Sort");
         System.out.println("0. Quit");
         System.out.printf("Make your selection:  ");
     }
