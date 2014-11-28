@@ -2,6 +2,7 @@ public class QuickSort
 {
     /*
      *     Divide and conquer sort with complexity of O(n log n).
+     *     Has worst case complexity of O(n^2).
      *     Uses recursive calls to sort array
      *     Considered the fastest sorting algorithm.
      */
@@ -17,25 +18,29 @@ public class QuickSort
         if(low >= high) return;
 
         /* get pivot point */
-        int middle = (low + high) / 2;
+        //int middle = low + ((high - low) / 2);
+        int middle = low + (high - low) / 2;
         T pivot = array[middle];
 
-        /* arrange so left<pivot<right */
+        /* Set end pointers for loops */
         int i = low;
         int j = high;
 
         while(i < j)
         {
+            /* moves low pointer forward until out of place element is found */
             while(array[i].compareTo(pivot) < 0)
             {
                 i++;
             }
 
+            /* moves high pointer back until out of place element is found */
             while(array[j].compareTo(pivot) > 0)
             {
                 j--;
             }
 
+            /* Swaps the elements and moves pointers */
             if(i <= j)
             {
                 T temp = array[j];
