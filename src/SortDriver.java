@@ -48,6 +48,11 @@ public class SortDriver
                     processArray(intArray, choice);
                     processArray(strArray, choice);
                     break;
+                case 5:
+                    System.out.printf("Merge Sort results\n###################\n");
+                    processArray(intArray, choice);
+                    processArray(strArray, choice);
+                    break;
                 case 0:
                     quit = true;
                     break;
@@ -77,6 +82,9 @@ public class SortDriver
             case 4:
                 QuickSort.sort(array);
                 break;
+            case 5:
+                MergeSort.sort(array);
+                break;
             default: ; // Will never be default
         }
         printArray("Sorted array:   ", array);
@@ -94,6 +102,7 @@ public class SortDriver
         System.out.println("2. Insertion Sort");
         System.out.println("3. Selection Sort");
         System.out.println("4. Quick Sort");
+        System.out.println("5. Merge Sort");
         System.out.println("0. Quit");
         System.out.printf("Make your selection:  ");
     }
