@@ -18,8 +18,7 @@ public class QuickSort
         if(low >= high) return;
 
         /* get pivot point */
-        //int middle = low + ((high - low) / 2);
-        int middle = low + (high - low) / 2;
+        int middle = low + ((high - low) / 2);
         T pivot = array[middle];
 
         /* Set end pointers for loops */
