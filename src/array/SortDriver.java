@@ -57,7 +57,7 @@ public class SortDriver
                     quit = true;
                     break;
                 default:
-                    System.out.printf("Error: Not a valid option.  Please choose again.\n\n");
+                    System.err.printf("Error: Not a valid option.  Please choose again.\n\n");
                     break;
             }
             System.out.println();
