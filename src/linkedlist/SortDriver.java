@@ -58,7 +58,7 @@ public class SortDriver
                     quit = true;
                     break;
                 default:
-                    System.out.printf("Error: Not a valid option.  Please choose again.\n\n");
+                    System.err.printf("Error: Not a valid option.  Please choose again.\n\n");
                     break;
             }
             System.out.println();
@@ -72,7 +72,7 @@ public class SortDriver
         switch(choice)
         {
             case 1:
-                //BubbleSort.sort(list);
+                BubbleSort.sort(list);
                 break;
             case 2:
                 //InsertionSort.sort(list);
