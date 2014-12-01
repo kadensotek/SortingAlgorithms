@@ -10,4 +10,11 @@ public class SelectionSort
     {
 
     }
+
+    public static <T> void swap(List<T> list, int firstPos, int secondPos)
+    {
+        T temp = list.get(firstPos);
+        list.set(firstPos, list.get(secondPos));
+        list.set(secondPos, temp); 
+    }
 }
