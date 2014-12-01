@@ -8,7 +8,7 @@ public class SelectionSort
 
     public static <T extends Comparable<T>> void sort(T[] array)
     {
-        for(int i=0; i<array.length; i++)
+        for(int i=0; i<array.length-1; i++)
         {
             T minVal = array[i];
             int minValIndex = i;
