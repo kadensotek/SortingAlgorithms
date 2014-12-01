@@ -14,3 +14,4 @@ Progress:
 * LinkedList
   * Bubble Sort
   * Insertion Sort
+  * Selection Sort
