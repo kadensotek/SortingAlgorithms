@@ -75,7 +75,7 @@ public class SortDriver
                 BubbleSort.sort(list);
                 break;
             case 2:
-                //InsertionSort.sort(list);
+                InsertionSort.sort(list);
                 break;
             case 3:
                 //SelectionSort.sort(list);
