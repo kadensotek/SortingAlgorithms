@@ -78,7 +78,7 @@ public class SortDriver
                 InsertionSort.sort(list);
                 break;
             case 3:
-                //SelectionSort.sort(list);
+                SelectionSort.sort(list);
                 break;
             case 4:
                 //QuickSort.sort(list);

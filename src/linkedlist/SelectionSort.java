@@ -1,3 +1,5 @@
+import java.util.List;
+
 public class SelectionSort
 {
     /*
@@ -8,7 +10,26 @@ public class SelectionSort
 
     public static <T extends Comparable<T>> void sort(List<T> list)
     {
+        /* Iterate through list, swapping min value in remaining list with
+         * current value in this loop
+         */
+        for(int i=0; i<list.size()-1; i++)
+        {
+            T minVal = list.get(i);
+            int minValIndex = i;
 
+            /* Finding smallest element in list */
+            for(int j=i+1; j<list.size(); j++)
+            {
+               /* Updates smallest element if one is found */
+               if(list.get(j).compareTo(minVal) < 0)
+               {
+                   minVal = list.get(j);
+                   minValIndex = j;
+               } 
+            }
+            swap(list, i, minValIndex);
+        } 
     }
 
     public static <T> void swap(List<T> list, int firstPos, int secondPos)
