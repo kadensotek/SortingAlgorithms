@@ -8,7 +8,7 @@ public class InsertionSort
 
     public static <T extends Comparable<T>> void sort(T[] array)
     {
-        /* Cycle through array */
+        /* Cycle through array, starting at second element */
         for(int i=1; i<array.length; i++)
         {
             T value = array[i];  /* Element that we're looking at */
@@ -18,7 +18,7 @@ public class InsertionSort
              *   moving elements toward the end until comparison elements
              *   are no longer larger than our value 
              */
-            while(j>=0 && array[j].compareTo(value)>0)
+            while(j >= 0 && array[j].compareTo(value) > 0)
             {
                 array[j+1] = array[j];
                 j--;
